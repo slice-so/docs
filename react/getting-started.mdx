@@ -1,0 +1,48 @@
+---
+title: "Getting Started"
+description: "Start using Slicekit React in your application."
+---
+
+## Slice Provider
+
+Wrap your app with the `SliceProvider` to enable SliceKit hooks and components.
+
+```tsx
+import { SliceProvider } from "@slicekit/react"
+
+function App() {
+  return (
+    <SliceProvider>
+      <YourApp />
+    </SliceProvider>
+  )
+}
+```
+
+### Parameters
+
+<ParamField body="initCart" type="`ProductCart[] | undefined`">
+  Initial cart state to be used by the hooks. If undefined, the cart will be
+  taken from localStorage if present.
+</ParamField>
+
+## Wagmi config
+
+Some actions require a Wagmi config to be passed as param.
+
+```ts
+import { createConfig } from "@wagmi/core"
+import { base } from "@wagmi/core/chains"
+
+const config = createConfig({
+  chains: [base],
+  transports: {
+    [base.id]: http(`https://mainnet.base.org`)
+  }
+})
+```
+
+<Note>
+  Refer to the [Wagmi documentation](https://wagmi.sh/core/api/createConfig) for
+  more information.
+</Note>

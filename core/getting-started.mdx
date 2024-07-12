@@ -1,0 +1,25 @@
+---
+title: "Getting Started"
+description: "Start using Slicekit Core in your application."
+---
+
+## Wagmi config
+
+Some actions require a Wagmi config to be passed as param.
+
+```ts
+import { createConfig } from "@wagmi/core"
+import { base } from "@wagmi/core/chains"
+
+const config = createConfig({
+  chains: [base],
+  transports: {
+    [base.id]: http(`https://mainnet.base.org`)
+  }
+})
+```
+
+<Note>
+  Refer to the [Wagmi documentation](https://wagmi.sh/core/api/createConfig) for
+  more information.
+</Note>
