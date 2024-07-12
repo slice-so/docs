@@ -1,0 +1,36 @@
+---
+title: "usePayProductsConfig"
+description: "Get PayProducts config for a given account"
+---
+
+import { ActionHookNote } from "/snippets/params/common/ActionHookNote.mdx"
+import WagmiConfigParams from "/snippets/params/common/WagmiConfigParams.mdx"
+import { GenericParam } from "/snippets/params/common/GenericParam.mdx"
+
+import PayProductsConfigParams, {
+  paramName
+} from "/snippets/params/checkout/PayProductsConfigParams.mdx"
+
+## Usage
+
+```ts
+import { usePayProductsConfig } from "@slicekit/react"
+import { useAccount } from "wagmi"
+
+const { address } = useAccount()
+
+const { data: payProductsConfig } = usePayProductsConfig(config, {
+  account: address
+})
+```
+
+<ActionHookNote paramName="payProductsConfig" />
+
+## Parameters
+
+<WagmiConfigParams />
+<GenericParam paramName={paramName} />
+
+### PayProductsConfigParams
+
+<PayProductsConfigParams isReact={true} />

@@ -1,0 +1,29 @@
+export const paramName = "OrderParams"
+
+<ParamField body="buyer" type="`0x${string}`" required>
+  The address of the buyer.
+</ParamField>
+
+<ParamField body="signature" type="`0x${string}`">
+  The buyer's signature required to return full shipping info. If undefined,
+  incorrect or expired, partial shipping info will be returned.
+</ParamField>
+
+<ParamField body="slicerIds" type="number[]">
+  Store IDs to filter `slicerOrders` by. Takes precedence over `slicerId`. If
+  both undefined, all `slicerOrders` will be returned.
+</ParamField>
+
+<ParamField body="slicerId" type="number">
+  Store ID to filter `slicerOrders` by. Overridden by `slicerIds` if defined. If
+  both undefined, all `slicerOrders` will be returned.
+</ParamField>
+
+<ParamField body="thegraphApiKey" type="string">
+  The Graph API key to use for querying the Slice subgraph. If undefined, the
+  developer endpoint is used.
+</ParamField>
+
+<ParamField body="first" default={100} type="number">
+  The number of orders to return. Defaults to 100.
+</ParamField>

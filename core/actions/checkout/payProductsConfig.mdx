@@ -1,0 +1,37 @@
+---
+title: "payProductsConfig"
+description: "Get PayProducts config for a given account and cart"
+---
+
+import { ActionHookNote } from "/snippets/params/common/ActionHookNote.mdx"
+import WagmiConfigParams from "/snippets/params/common/WagmiConfigParams.mdx"
+import { GenericParam } from "/snippets/params/common/GenericParam.mdx"
+
+import PayProductsConfigParams, {
+  paramName
+} from "/snippets/params/checkout/PayProductsConfigParams.mdx"
+
+## Usage
+
+```ts
+import { getPayProductsConfig } from "@slicekit/core"
+import { useAccount } from "wagmi"
+
+const { address } = useAccount()
+
+const payProductsConfig = await payProductsConfig(config, {
+  account: address,
+  cart
+})
+```
+
+<ActionHookNote paramName="usePayProductsConfig" />
+
+## Parameters
+
+<WagmiConfigParams />
+<GenericParam paramName={paramName} />
+
+### PayProductsConfigParams
+
+<PayProductsConfigParams />

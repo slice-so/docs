@@ -1,0 +1,41 @@
+---
+title: "payWithAuthorization"
+description: "Trigger purchase of a given cart via the Slice relayer."
+---
+
+import { ActionHookNote } from "/snippets/params/common/ActionHookNote.mdx"
+import WagmiConfigParams from "/snippets/params/common/WagmiConfigParams.mdx"
+import { GenericParam } from "/snippets/params/common/GenericParam.mdx"
+
+import PayProductsConfigParams, {
+  paramName
+} from "/snippets/params/checkout/PayProductsConfigParams.mdx"
+
+## Usage
+
+```ts
+import { payWithAuthorization } from "@slicekit/core"
+
+const hash = await payWithAuthorization(config, {
+  buyer,
+  cart,
+  totalUsdcPrice,
+  signature,
+  authorizationParams
+})
+```
+
+## Parameters
+
+<WagmiConfigParams />
+<GenericParam paramName={paramName} />
+
+### payWithAuthorizationParams
+
+<PayProductsConfigParams />
+
+## Return Type
+
+<ParamField body="hash" type="`0x${string}`">
+  Transaction hash.
+</ParamField>

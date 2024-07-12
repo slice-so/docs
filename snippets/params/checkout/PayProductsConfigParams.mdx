@@ -1,0 +1,27 @@
+export const paramName = "PayProductsConfigParams"
+
+<ParamField body="account" type="`0x${string}`" required>
+  Account address executing the transaction. Typically corresponds with `buyer`.
+</ParamField>
+
+{!isReact && <ParamField body="cart" type="ProductCart[]" required>
+Cart of products to purchase.
+
+</ParamField>}
+
+<ParamField body="buyer" type="`0x${string}`">
+  Buyer address for the transaction. Defaults to `account`.
+</ParamField>
+
+<ParamField body="referrer" type="`0x${string}`">
+  Referrer address for the transaction.
+</ParamField>
+
+<ParamField body="extraCosts" default={[]} type="ExtraCost[]">
+  Additional costs to be added to the transaction.
+</ParamField>
+
+{!isReact && <ParamField body="chainId" default={8453} type="number" deprecated>
+Chain ID of the network.
+
+</ParamField>}

@@ -1,0 +1,30 @@
+---
+title: "useCheckout"
+description: "Hook to initialize the checkout process."
+---
+
+import WagmiConfigParams from "/snippets/params/common/WagmiConfigParams.mdx"
+import { GenericParam } from "/snippets/params/common/GenericParam.mdx"
+
+import UseCheckoutParams, {
+  paramName
+} from "/snippets/params/checkout/UseCheckoutParams.mdx"
+
+## Usage
+
+```ts
+import { useCheckout } from "@slicekit/react"
+
+const { checkout } = useCheckout(config, {
+  buyer
+})
+```
+
+## Parameters
+
+<WagmiConfigParams />
+<GenericParam paramName={paramName} />
+
+### UseCheckoutParams
+
+<UseCheckoutParams />

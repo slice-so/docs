@@ -1,0 +1,33 @@
+---
+title: "getOrders"
+description: "Get orders details by buyer address"
+---
+
+import { ActionHookNote } from "/snippets/params/common/ActionHookNote.mdx"
+
+import OrdersParams from "/snippets/params/orders/OrdersParams.mdx"
+
+## Usage
+
+```ts
+import { getOrders } from "@slicekit/core"
+
+const orders = await getOrders({
+  buyer,
+  signature
+})
+```
+
+<ActionHookNote paramName="useOrders" />
+
+## Parameters
+
+<OrdersParams />
+
+## Return Type
+
+```ts
+import { type DetailedOrder } from "@slicekit/core"
+
+type Orders = DetailedOrder[]
+```

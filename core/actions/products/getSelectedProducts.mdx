@@ -1,0 +1,26 @@
+---
+title: "getSelectedProducts"
+description: "Get selected products of multiple stores."
+---
+
+import GetSelectedProductsParams from "/snippets/params/products/GetSelectedProductsParams.mdx"
+import GetSelectedProductsReturnType from "/snippets/params/products/GetSelectedProductsReturnType.mdx"
+
+## Usage
+
+```ts
+import { getSelectedProducts } from "@slicekit/core"
+
+const cartProducts = await getSelectedProducts({
+  products,
+  buyer
+})
+```
+
+## Parameters
+
+<GetSelectedProductsParams />
+
+## Return Type
+
+<GetSelectedProductsReturnType />

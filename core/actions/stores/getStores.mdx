@@ -1,0 +1,28 @@
+---
+title: "getStores"
+description: "Get stores by IDs."
+---
+
+import GetStoresParams from "/snippets/params/stores/GetStoresParams.mdx"
+
+## Usage
+
+```ts
+import { getStores } from "@slicekit/core"
+
+const stores = await getStores({
+  slicerIds
+})
+```
+
+## Parameters
+
+<GetStoresParams />
+
+## Return Type
+
+```ts
+import { type SlicerBasics } from "@slicekit/core"
+
+type Stores = SlicerBasics[]
+```

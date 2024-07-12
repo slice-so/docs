@@ -1,0 +1,31 @@
+---
+title: "getTotalPrices"
+description: "Get prices given a cart."
+---
+
+import { ActionHookNote } from "/snippets/params/common/ActionHookNote.mdx"
+
+import GetTotalPricesParams from "/snippets/params/prices/GetTotalPricesParams.mdx"
+import GetTotalPricesReturnType from "/snippets/params/prices/GetTotalPricesReturnType.mdx"
+
+## Usage
+
+```ts
+import { getTotalPrices } from "@slicekit/core"
+
+const { totalEthPrice, totalUsdcPrice, subtotalEth, subtotalUsdc } =
+  await getTotalPrices({
+    cart,
+    ethUsd
+  })
+```
+
+<ActionHookNote paramName="usePriceRecap" />
+
+## Parameters
+
+<GetTotalPricesParams />
+
+## Return Type
+
+<GetTotalPricesReturnType />

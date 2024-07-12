@@ -58,7 +58,41 @@
     },
     {
       "group": "Actions",
-      "pages": ["core/actions/getOrder"]
+      "pages": [
+        {
+          "group": "Checkout",
+          "pages": [
+            "core/actions/checkout/payProducts",
+            "core/actions/checkout/payProductsConfig"
+          ]
+        },
+        {
+          "group": "Orders",
+          "pages": [
+            "core/actions/orders/getOrder",
+            "core/actions/orders/getOrders"
+          ]
+        },
+        {
+          "group": "Prices",
+          "pages": [
+            "core/actions/prices/getTotalPrices",
+            "core/actions/prices/getDisplayedPrices"
+          ]
+        },
+        {
+          "group": "Products",
+          "pages": [
+            "core/actions/products/getProduct",
+            "core/actions/products/getSelectedProducts",
+            "core/actions/products/getStoreProducts"
+          ]
+        },
+        {
+          "group": "Stores",
+          "pages": ["core/actions/stores/getStores"]
+        }
+      ]
     },
     {
       "group": "Introduction",
@@ -66,7 +100,27 @@
     },
     {
       "group": "Hooks",
-      "pages": ["react/hooks/useOrder"]
+      "pages": [
+        {
+          "group": "Checkout",
+          "pages": [
+            "react/hooks/checkout/useCart",
+            "react/hooks/checkout/useCheckout",
+            "react/hooks/checkout/usePayProductsConfig"
+          ]
+        },
+        {
+          "group": "Orders",
+          "pages": [
+            "react/hooks/orders/useOrder",
+            "react/hooks/orders/useOrders"
+          ]
+        },
+        {
+          "group": "Prices",
+          "pages": ["react/hooks/prices/usePriceRecap"]
+        }
+      ]
     }
   ],
   "footerSocials": {

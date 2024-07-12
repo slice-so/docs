@@ -1,0 +1,27 @@
+---
+title: "getDisplayedPrices"
+description: "Get prices to display for a given product."
+---
+
+import GetDisplayedPricesParams from "/snippets/params/prices/GetDisplayedPricesParams.mdx"
+import GetDisplayedPricesReturnType from "/snippets/params/prices/GetDisplayedPricesReturnType.mdx"
+
+## Usage
+
+```ts
+import { getDisplayedPrices } from "@slicekit/core"
+
+const { displayedPrice, displayedFullPrice, isDiscounted, discountPercentage } =
+  await getDisplayedPrices({
+    product,
+    ethUsd
+  })
+```
+
+## Parameters
+
+<GetDisplayedPricesParams />
+
+## Return Type
+
+<GetDisplayedPricesReturnType />

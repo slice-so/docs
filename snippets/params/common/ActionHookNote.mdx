@@ -1,0 +1,22 @@
+export const ActionHookNote = ({ paramName }) => {
+  const isReact = !paramName.startsWith("use")
+  if (typeof document === "undefined") {
+    return null;
+  }
+
+const subfolder = window.location.pathname.split("/").slice(-2,-1)[0]
+
+return (
+
+<Note>
+  See{" "}
+  <a
+    href={`/${!isReact ? "react/hooks" : "core/actions"}/${
+      subfolder ? `${subfolder}/` : ""
+    }${paramName}`}
+  >
+    {paramName}
+  </a>{" "}
+  for the corresponding {!isReact ? "React hook" : "action"}.
+</Note>
+)}

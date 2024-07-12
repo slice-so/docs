@@ -1,0 +1,28 @@
+---
+title: "getStoreProducts"
+description: "Get all products of a store given a slicer ID."
+---
+
+import GetStoreProductsParams from "/snippets/params/products/GetStoreProductsParams.mdx"
+import GetStoreProductsReturnType from "/snippets/params/products/GetStoreProductsReturnType.mdx"
+
+## Usage
+
+```ts
+import { getStoreProducts } from "@slicekit/core"
+
+const { cartProducts, storeClosed } = await getStoreProducts({
+  slicerId,
+  buyer,
+  isOnsite,
+  isDelivery
+})
+```
+
+## Parameters
+
+<GetStoreProductsParams />
+
+## Return Type
+
+<GetStoreProductsReturnType />

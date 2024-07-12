@@ -1,0 +1,41 @@
+export const paramName = "UseCheckoutParams"
+
+<ParamField body="buyer" type="`0x${string}`">
+  Buyer address for the transaction.
+</ParamField>
+
+<ParamField body="buyerInfo" type="`ShippingInfo`">
+  Shipping info for the purchase.
+
+```ts
+import { type ShippingInfo } from "@slicekit/core"
+```
+
+</ParamField>
+
+<ParamField body="extraCosts" default={[]} type="ExtraCostParamsOptional[]">
+  Additional costs to be added to the transaction.
+
+```ts
+import { type ExtraCostParamsOptional } from "@slicekit/core"
+```
+
+</ParamField>
+
+<ParamField body="onSuccess" type="(data: HandleCheckoutReturnData) => void">
+  Callback function to be called on successful transaction.
+
+```ts
+import { type HandleCheckoutReturnData } from "@slicekit/core"
+```
+
+</ParamField>
+
+<ParamField body="onError" type="(data: HandleCheckoutReturnData) => void">
+  Callback function to be called on transaction error.
+
+```ts
+import { type HandleCheckoutReturnData } from "@slicekit/core"
+```
+
+</ParamField>

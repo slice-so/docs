@@ -1,0 +1,18 @@
+export const paramName = "GetStoreProductsParams"
+
+<ParamField body="slicerId" type="number" required>
+  ID of the slicer to get products from.
+</ParamField>
+
+<ParamField body="buyer" type="`0x${string}` | undefined">
+  Address of the buyer, used to determine eventual discounts. If not provided,
+  base prices are returned.
+</ParamField>
+
+<ParamField body="isOnsite" type="boolean">
+  Set to true to return products that are available for onsite purchases.
+</ParamField>
+
+<ParamField body="isDelivery" type="boolean">
+  Set to true to return products that are available for online purchases.
+</ParamField>

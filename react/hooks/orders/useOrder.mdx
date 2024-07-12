@@ -1,0 +1,31 @@
+---
+title: "useOrder"
+description: "Get order details by transaction hash"
+---
+
+import { ActionHookNote } from "/snippets/params/common/ActionHookNote.mdx"
+
+import OrderParams from "/snippets/params/orders/OrderParams.mdx"
+
+## Usage
+
+```ts
+import { useOrder } from "@slicekit/react"
+
+const { data: order } = useOrder({
+  transactionHash,
+  signature
+})
+```
+
+<ActionHookNote paramName="getOrder" />
+
+## Parameters
+
+<OrderParams />
+
+## Return Type
+
+```ts
+import { type DetailedOrder } from "@slicekit/core"
+```

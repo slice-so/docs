@@ -1,0 +1,41 @@
+---
+title: "payProducts"
+description: "Trigger purchase of a given cart."
+---
+
+import { ActionHookNote } from "/snippets/params/common/ActionHookNote.mdx"
+import WagmiConfigParams from "/snippets/params/common/WagmiConfigParams.mdx"
+import { GenericParam } from "/snippets/params/common/GenericParam.mdx"
+
+import PayProductsConfigParams, {
+  paramName
+} from "/snippets/params/checkout/PayProductsConfigParams.mdx"
+
+## Usage
+
+```ts
+import { payProducts } from "@slicekit/core"
+import { useAccount } from "wagmi"
+
+const { address } = useAccount()
+
+const hash = await payProducts(config, {
+  account: address,
+  cart
+})
+```
+
+## Parameters
+
+<WagmiConfigParams />
+<GenericParam paramName={paramName} />
+
+### PayProductsParams
+
+<PayProductsConfigParams />
+
+## Return Type
+
+<ParamField body="hash" type="`0x${string}`">
+  Transaction hash.
+</ParamField>

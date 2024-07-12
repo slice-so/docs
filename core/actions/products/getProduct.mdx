@@ -1,0 +1,27 @@
+---
+title: "getProduct"
+description: "Get selected product given slicer and product ID."
+---
+
+import GetProductParams from "/snippets/params/products/GetProductParams.mdx"
+import GetProductReturnType from "/snippets/params/products/GetProductReturnType.mdx"
+
+## Usage
+
+```ts
+import { getProduct } from "@slicekit/core"
+
+const product = await getProduct({
+  slicerId,
+  productId,
+  buyer
+})
+```
+
+## Parameters
+
+<GetProductParams />
+
+## Return Type
+
+<GetProductReturnType />

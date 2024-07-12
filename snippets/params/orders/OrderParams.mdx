@@ -1,51 +1,25 @@
----
-title: "useOrder"
-description: "Get order details by transaction hash"
----
-
-## Usage
-
-```ts
-import { useOrder } from "@slicekit/react"
-
-const { data: order } = useOrder({
-  transactionHash,
-  signature
-})
-```
-
-<Note>
-  See [getOrder](/core/actions/getOrder) for the corresponding action.
-</Note>
-
-## Parameters
+export const paramName = "OrderParams"
 
 <ParamField body="transactionHash" type="`0x${string}`" required>
   The transaction hash related to the order
 </ParamField>
 
-<ParamField body="signature" type="`0x${string}` | undefined">
+<ParamField body="signature" type="`0x${string}`">
   The buyer's signature required to return full shipping info. If undefined,
   incorrect or expired, partial shipping info will be returned.
 </ParamField>
 
-<ParamField body="slicerIds" type="number[] | undefined">
+<ParamField body="slicerIds" type="number[]">
   Store IDs to filter `slicerOrders` by. Takes precedence over `slicerId`. If
   both undefined, all `slicerOrders` will be returned.
 </ParamField>
 
-<ParamField body="slicerId" type="number | undefined">
+<ParamField body="slicerId" type="number">
   Store ID to filter `slicerOrders` by. Overridden by `slicerIds` if defined. If
   both undefined, all `slicerOrders` will be returned.
 </ParamField>
 
-<ParamField body="thegraphApiKey" type="string | undefined">
+<ParamField body="thegraphApiKey" type="string">
   The Graph API key to use for querying the Slice subgraph. If undefined, the
   developer endpoint is used.
 </ParamField>
-
-## Return Type
-
-```ts
-import { type DetailedOrder } from "@slicekit/core"
-```

@@ -1,0 +1,29 @@
+---
+title: "usePriceRecap"
+description: "Get prices given a cart."
+---
+
+import { ActionHookNote } from "/snippets/params/common/ActionHookNote.mdx"
+
+import GetTotalPricesParams from "/snippets/params/prices/GetTotalPricesParams.mdx"
+import GetTotalPricesReturnType from "/snippets/params/prices/GetTotalPricesReturnType.mdx"
+
+## Usage
+
+```ts
+import { usePriceRecap } from "@slicekit/react"
+
+const { data: totalPrices } = usePriceRecap({
+  ethUsd
+})
+```
+
+<ActionHookNote paramName="getTotalPrices" />
+
+## Parameters
+
+<GetTotalPricesParams isReact={true} />
+
+## Return Type
+
+<GetTotalPricesReturnType />

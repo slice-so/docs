@@ -1,0 +1,15 @@
+export const paramName = "GetSelectedProductsParams"
+
+<ParamField body="products" type="ProductsBySlicer[]" required>
+  List of products to fetch.
+
+```ts
+import { ProductsBySlicer } from "@slicekit/core"
+```
+
+</ParamField>
+
+<ParamField body="buyer" type="`0x${string}` | undefined">
+  Address of the buyer, used to determine eventual discounts. If not provided,
+  base prices are returned.
+</ParamField>

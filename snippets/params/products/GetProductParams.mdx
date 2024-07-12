@@ -1,0 +1,14 @@
+export const paramName = "GetProductParams"
+
+<ParamField body="slicerId" type="number" required>
+  ID of the slicer to get the product from.
+</ParamField>
+
+<ParamField body="productId" type="number" required>
+  ID of the product to fetch.
+</ParamField>
+
+<ParamField body="buyer" type="`0x${string}` | undefined">
+  Address of the buyer, used to determine eventual discounts. If not provided,
+  base prices are returned.
+</ParamField>
